@@ -1,5 +1,10 @@
 /* Глобальные стили для проекта, их можно дополнять и менять по желанию */
 
+:root {
+  --bg-image-url: url('../images/cover-image.png');
+  --bg-color: #000028;
+}
+
 *,
 *::before,
 *::after {
@@ -39,4 +44,12 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+.page {
+  min-height: 100dvh;
+  background: var(--bg-image-url) center no-repeat;
+  background-color: var(--bg-color);
+  background-size: cover;
+  background-attachment: fixed;
 }
