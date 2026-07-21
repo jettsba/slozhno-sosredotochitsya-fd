@@ -1,5 +1,109 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  min-height: 100dvh;
+  background: var(--bg-image-url) center no-repeat;
+  background-color: var(--bg-color);
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+/* Декоративные уголки */
+
+.decorated-zone:before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+} 
+
+.decorated-zone:after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+} 
+
+.header__rec {
+  color: var(--accent-color);
+  position: absolute;
+  top: 20px;
+  right: 48px;
+}
+
+.header__rec:after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 42px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+/* Header секция */
+
+.header {
+  position: relative;
+  block-size: 100dvh;
+  min-block-size: 768px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.header__theme-menu-list {
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  background-color: transparent;
+  border: none;
+  padding: auto;
+
+  text-align: center;
+  text-transform: lowercase;
+  color: var(--accent-color)
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  justify-self: start;
+  align-self: center;
+  line-height: 0.825;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__description {
+  justify-self: end;
+  align-self: center;
+  white-space: pre-line;
+  margin-right: 20px;
+}
+
+.title-decor {
+  color: #000028;
+  background-color: var(--accent-color);
+  font-weight: bold;
+  
+}
+
+
