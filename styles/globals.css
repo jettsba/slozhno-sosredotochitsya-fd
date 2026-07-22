@@ -43,3 +43,18 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+a {
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--accent-color);
+ 
+}
+
+a:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+a:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
