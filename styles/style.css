@@ -256,6 +256,11 @@
     gap: 10px;
   }
 
+  .topic.why-difficult .card,
+  .topic.how-to-concentrate .card {
+    padding-left: 8px;
+  }
+
   .what-reduces .card {
     grid-column: 1 / -1;
     grid-row: auto;
@@ -310,6 +315,11 @@
 
   .topic:first-of-type {
     margin-top: 40px;
+  }
+
+  .topic.why-difficult .card,
+  .topic.how-to-concentrate .card {
+    padding-left: 0;
   }
 
   .topic .card {
