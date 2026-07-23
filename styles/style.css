@@ -74,16 +74,17 @@
 
 .header__theme-menu-button {
   cursor: pointer;
-  width: 70px;
+  inline-size: 70px;
+  min-block-size: 26px;
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   text-align: center;
   text-transform: lowercase;
   color: var(--accent-color);
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color-transparent);
+  border-color: var(--accent-color-transparent);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -93,7 +94,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .header__title {
@@ -171,7 +172,7 @@
 }
 
 .card__title.standalone {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /* Галерея */
@@ -255,11 +256,6 @@
     gap: 10px;
   }
 
-  .topic.why-difficult .card,
-  .topic.how-to-concentrate .card {
-    padding-left: 8px;
-  }
-
   .what-reduces .card {
     grid-column: 1 / -1;
     grid-row: auto;
@@ -273,8 +269,13 @@
 
 @media (width <= 375px) {
   .header {
-    padding: 0 10px;
+    padding: 10px;
     min-block-size: 668px;
+  }
+
+  .header__title,
+  .footer__quote {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
   .decorated-zone:before {
