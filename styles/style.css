@@ -222,7 +222,7 @@
 .footer {
   position: relative;
   block-size: 100dvh;
-  min-height: 768px;
+  min-block-size: 768px;
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 60px
@@ -237,21 +237,104 @@
 }
 
 @media (width <= 768px) {
+  .header {
+    min-block-size: 1024px;
+  }
+
   .header__theme-menu {
-  justify-self: end;
-  align-self: center;
-  margin-right: 20px;
-  grid-column: 2 / 3;
+    justify-self: end;
+    align-self: center;
+    margin-right: 20px;
+    grid-column: 2 / 3;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .topic.why-difficult .card,
+  .topic.how-to-concentrate .card {
+    padding-left: 8px;
+  }
+
+  .what-reduces .card {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .footer {
+    margin-top: 60px;
+    min-block-size: 1024px;
+  }
 }
 
-.header__theme-menu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+@media (width <= 375px) {
+  .header {
+    padding: 0 10px;
+    min-block-size: 668px;
+  }
 
-.what-reduces .card {
-  grid-column: 1 / -1;
-  grid-row: auto;
-}
+  .decorated-zone:before {
+    top: 10px;
+    right: 10px;
+  }
+
+  .decorated-zone:after {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .header__rec {
+    top: 10px;
+    right: 38px;
+  }
+
+  .header__description {
+    margin-right: 0;
+    grid-column: 1 / -1;
+  }
+
+  .header__theme-menu {
+    margin-right: 0;
+  }
+
+  .topic {
+    padding: 0 10px;
+    margin-top: 50px;
+    grid-template-columns: 1fr;
+  }
+
+  .topic:first-of-type {
+    margin-top: 40px;
+  }
+
+  .topic .card {
+    grid-column: 1 / -1;
+  }
+
+  .gallery {
+    padding: 0 10px;
+    margin-top: 50px;
+  }
+
+  .gallery__title {
+    margin-bottom: 10px;
+  }
+
+  .gallery__grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .gallery__grid .gallery__image {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .footer {
+    margin-top: 40px;
+    min-block-size: 668px;
+  }
 }
