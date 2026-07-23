@@ -73,6 +73,7 @@
 }
 
 .header__theme-menu-button {
+  cursor: pointer;
   width: 70px;
   background-color: transparent;
   border: none;
@@ -91,6 +92,7 @@
 }
 
 .header__theme-menu-button_active {
+  pointer-events: none;
   border: 1px solid var(--accent-color);
 }
 
@@ -102,7 +104,7 @@
   line-height: 0.825;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-bg-color);
 }
 
 .header__description {
@@ -117,7 +119,7 @@
 
 .title-decor {
   color: #000028;
-  background-color: var(--accent-color);
+  background-color: var(--accent-bg-color);
   font-weight: bold;
 }
 
@@ -233,7 +235,7 @@
   align-self: center;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   color: var(--title-color);
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 #FF0070;
 }
 
 @media (width <= 768px) {
