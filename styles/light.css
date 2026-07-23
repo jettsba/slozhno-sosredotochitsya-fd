@@ -1,25 +1,25 @@
 :root.theme-light {
-  --bg-image-url: url('../images/cover-image-light.png');
-  --bg-color: #FFF1F7;
+  --bg-image-url: url("../images/cover-image-light.png");
+  --bg-color: #fff1f7;
   --accent-color: #353430;
-  --accent-bg-color: #FF8DCB;
+  --accent-bg-color: #ff8dcb;
   --accent-color-transparent: rgb(50 49 45 / 0.4);
-  --title-color: #FFC2E6;
+  --title-color: #ffc2e6;
   --text-color: #353430;
 }
 
 .theme-light .header__rec {
-    display: none;
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-image-url: url('../images/cover-image-light.png');
-    --bg-color: #FFF1F7;
+    --bg-image-url: url("../images/cover-image-light.png");
+    --bg-color: #fff1f7;
     --accent-color: #353430;
-    --accent-bg-color: #FF8DCB;
+    --accent-bg-color: #ff8dcb;
     --accent-color-transparent: rgb(50 49 45 / 0.4);
-    --title-color: #FFC2E6;
+    --title-color: #ffc2e6;
     --text-color: #353430;
   }
 
